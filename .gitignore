@@ -34,3 +34,5 @@ model_saved_*/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+Miniconda3-latest-Linux-x86_64.sh
