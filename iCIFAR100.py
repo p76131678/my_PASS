@@ -16,10 +16,10 @@ class iCIFAR100(CIFAR100):
         super(iCIFAR100, self).__init__(root, train=train, transform=transform, target_transform=target_transform, download=download)
         self.target_test_transform = target_test_transform
         self.test_transform = test_transform
-        self.TrainData = []
-        self.TrainLabels = []
-        self.TestData = []
-        self.TestLabels = []
+        self.TrainData = None
+        self.TrainLabels = None
+        self.TestData = None
+        self.TestLabels = None
 
     def concatenate(self, datas, labels):
         con_data = datas[0]
@@ -36,8 +36,17 @@ class iCIFAR100(CIFAR100):
             datas.append(data)
             labels.append(np.full((data.shape[0]), label))
         datas, labels = self.concatenate(datas, labels)
-        self.TestData = datas if self.TestData == [] else np.concatenate((self.TestData, datas), axis=0)
-        self.TestLabels = labels if self.TestLabels == [] else np.concatenate((self.TestLabels, labels), axis=0)
+        if self.TestData is None:
+            self.TestData = datas
+        else:
+            self.TestData = np.concatenate((self.TestData, datas), axis=0)
+        
+        if self.TestLabels is None:
+            self.TestLabels = labels
+        else: 
+            self.TestLabels = np.concatenate((self.TestLabels, labels), axis=0)  
+        # self.TestData = datas if self.TestData == [] else np.concatenate((self.TestData, datas), axis=0)
+        # self.TestLabels = labels if self.TestLabels == [] else np.concatenate((self.TestLabels, labels), axis=0)
         print("the size of test set is %s" % (str(self.TestData.shape)))
         print("the size of test label is %s" % str(self.TestLabels.shape))
 
@@ -80,16 +89,18 @@ class iCIFAR100(CIFAR100):
         return index, img, target
 
     def __getitem__(self, index):
-        if self.TrainData != []:
+        if self.TrainData is not None and len(self.TrainData) > 0:
             return self.getTrainItem(index)
-        elif self.TestData != []:
+        elif self.TestData is not None and len(self.TestData) > 0:
             return self.getTestItem(index)
 
     def __len__(self):
-        if self.TrainData != []:
+        if self.TrainData is not None and len(self.TrainData) > 0:
             return len(self.TrainData)
-        elif self.TestData != []:
+        elif self.TestData is not None and len(self.TestData) > 0:
             return len(self.TestData)
+        else:
+            return 0
 
     def get_image_class(self, label):
         return self.data[np.array(self.targets) == label]

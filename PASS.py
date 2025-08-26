@@ -75,19 +75,18 @@ class protoAugSSL:
         self.test_dataset.getTestData(classes)
         train_loader = DataLoader(dataset=self.train_dataset,
                                   shuffle=True,
-                                  batch_size=self.args.batch_size)
+                                  batch_size=self.args.batch_size, num_workers=4)
 
         test_loader = DataLoader(dataset=self.test_dataset,
                                  shuffle=True,
-                                 batch_size=self.args.batch_size)
+                                 batch_size=self.args.batch_size, num_workers=4)
 
         return train_loader, test_loader
 
     def _get_test_dataloader(self, classes):
         self.test_dataset.getTestData_up2now(classes)
         test_loader = DataLoader(dataset=self.test_dataset,
-                                 shuffle=True,
-                                 batch_size=self.args.batch_size)
+                                 shuffle=True, batch_size=self.args.batch_size, num_workers=4)
         return test_loader
 
     def train(self, current_task, old_class=0):

@@ -97,7 +97,7 @@ def main():
             test_dataset.getTestData_up2now(classes)
             test_loader = DataLoader(dataset=test_dataset,
                                      shuffle=True,
-                                     batch_size=args.batch_size)
+                                     batch_size=args.batch_size, num_workers=4)
             correct, total = 0.0, 0.0
             for setp, (indexs, imgs, labels) in enumerate(test_loader):
                 imgs, labels = imgs.to(device), labels.to(device)
@@ -129,7 +129,7 @@ def main():
         test_dataset.getTestData_up2now(classes)
         test_loader = DataLoader(dataset=test_dataset,
                                  shuffle=True,
-                                 batch_size=args.batch_size)
+                                 batch_size=args.batch_size, num_workers=4)
         correct, total = 0.0, 0.0
         for setp, (indexs, imgs, labels) in enumerate(test_loader):
             imgs, labels = imgs.to(device), labels.to(device)

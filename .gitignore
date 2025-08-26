@@ -1,0 +1,36 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# Conda/venv environments
+env/
+venv/
+.venv/
+*.env
+
+# Data, models, outputs
+dataset/
+model_saved_test/
+model_saved_check/
+model_saved_*/
+*.h5
+*.pth
+*.pkl
+*.ckpt
+*.npz
+*.npy
+*.tar.gz
+*.zip
+
+# OS generated files
+.DS_Store
+Thumbs.db
