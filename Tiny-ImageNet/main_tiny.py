@@ -45,8 +45,12 @@ def main():
     for i in range(args.task_num+1):
         if i == 0:
             old_class = 0
+            classes = class_set[:args.fg_nc]
+
         else:
             old_class = len(class_set[:args.fg_nc + (i - 1) * task_size])
+            classes = class_set[args.fg_nc + (i-1)*task_size : args.fg_nc + i*task_size]
+
         print(classes)
         model.beforeTrain(i)
         model.train(i, old_class=old_class)
@@ -70,7 +74,7 @@ def main():
                 classes = class_set[(args.fg_nc + (i-1)*task_size):(args.fg_nc + i*task_size)]
 
             test_dataset = data_manager.get_dataset(test_transform, index=classes, train=False)
-            test_loader = DataLoader(dataset=test_dataset, shuffle=False, batch_size=args.batch_size)
+            test_loader = DataLoader(dataset=test_dataset, shuffle=False, batch_size=args.batch_size, num_workers=8)
             correct, total = 0.0, 0.0
             for setp, (imgs, labels) in enumerate(test_loader):
                 imgs, labels = imgs.to(device), labels.to(device)
@@ -115,7 +119,7 @@ def main():
 
         classes = class_set[:args.fg_nc+current_task*task_size]
         test_dataset = data_manager.get_dataset(test_transform, index=classes, train=False)
-        test_loader = DataLoader(dataset=test_dataset, shuffle=False, batch_size=args.batch_size)
+        test_loader = DataLoader(dataset=test_dataset, shuffle=False, batch_size=args.batch_size, num_workers=8)
         correct, total = 0.0, 0.0
         for setp, (imgs, labels) in enumerate(test_loader):
             imgs, labels = imgs.to(device), labels.to(device)

@@ -1,0 +1,368 @@
+# main.py 執行結果（範例）
+
+Namespace(epochs=101, batch_size=64, print_freq=10, data_name='cifar100', total_nc=100, fg_nc=50, task_num=10, learning_rate=0.001, protoAug_weight=10.0, kd_weight=10.0, temp=0.1, gpu='0', save_path='model_saved_check/')
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./dataset/cifar-100-python.tar.gz
+100%|█████████████████████████████████████████████████████████████████| 169M/169M [00:12<00:00, 13.9MB/s]
+Extracting ./dataset/cifar-100-python.tar.gz to ./dataset
+Files already downloaded and verified
+####################################################################################################
+[68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+the size of train set is (25000, 32, 32, 3)
+the size of train label is (25000,)
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+/home/nthucs/miniconda3/envs/pass_env/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+epoch:0, accuracy:0.25800
+epoch:10, accuracy:0.59580
+epoch:20, accuracy:0.70740
+epoch:30, accuracy:0.72300
+epoch:40, accuracy:0.71640
+epoch:50, accuracy:0.80320
+epoch:60, accuracy:0.79940
+epoch:70, accuracy:0.80080
+epoch:80, accuracy:0.79400
+epoch:90, accuracy:0.80560
+epoch:100, accuracy:0.80760
+0.1652210934458531
+/home/nthucs/CVPR_PASS/CVPR21_PASS/PASS.py:165: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.old_model = torch.load(filename)
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (5500, 32, 32, 3)
+the size of test label is (5500,)
+epoch:0, accuracy:0.65691
+epoch:10, accuracy:0.68545
+epoch:20, accuracy:0.70709
+epoch:30, accuracy:0.71655
+epoch:40, accuracy:0.69582
+epoch:50, accuracy:0.72036
+epoch:60, accuracy:0.72455
+epoch:70, accuracy:0.72782
+epoch:80, accuracy:0.72909
+epoch:90, accuracy:0.73255
+epoch:100, accuracy:0.72800
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (6000, 32, 32, 3)
+the size of test label is (6000,)
+epoch:0, accuracy:0.64500
+epoch:10, accuracy:0.65967
+epoch:20, accuracy:0.65867
+epoch:30, accuracy:0.64967
+epoch:40, accuracy:0.67317
+epoch:50, accuracy:0.68450
+epoch:60, accuracy:0.68100
+epoch:70, accuracy:0.67817
+epoch:80, accuracy:0.69167
+epoch:90, accuracy:0.68433
+epoch:100, accuracy:0.68917
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (6500, 32, 32, 3)
+the size of test label is (6500,)
+epoch:0, accuracy:0.58754
+epoch:10, accuracy:0.64492
+epoch:20, accuracy:0.62354
+epoch:30, accuracy:0.61369
+epoch:40, accuracy:0.63138
+epoch:50, accuracy:0.64769
+epoch:60, accuracy:0.65077
+epoch:70, accuracy:0.64954
+epoch:80, accuracy:0.64492
+epoch:90, accuracy:0.64600
+epoch:100, accuracy:0.64508
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (7000, 32, 32, 3)
+the size of test label is (7000,)
+epoch:0, accuracy:0.57414
+epoch:10, accuracy:0.60871
+epoch:20, accuracy:0.59871
+epoch:30, accuracy:0.57414
+epoch:40, accuracy:0.62357
+epoch:50, accuracy:0.62286
+epoch:60, accuracy:0.62943
+epoch:70, accuracy:0.62557
+epoch:80, accuracy:0.61986
+epoch:90, accuracy:0.62157
+epoch:100, accuracy:0.60686
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (7500, 32, 32, 3)
+the size of test label is (7500,)
+epoch:0, accuracy:0.53467
+epoch:10, accuracy:0.59027
+epoch:20, accuracy:0.57613
+epoch:30, accuracy:0.58827
+epoch:40, accuracy:0.56520
+epoch:50, accuracy:0.58720
+epoch:60, accuracy:0.59240
+epoch:70, accuracy:0.59333
+epoch:80, accuracy:0.59613
+epoch:90, accuracy:0.59307
+epoch:100, accuracy:0.59187
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (8000, 32, 32, 3)
+the size of test label is (8000,)
+epoch:0, accuracy:0.53625
+epoch:10, accuracy:0.55437
+epoch:20, accuracy:0.56537
+epoch:30, accuracy:0.54750
+epoch:40, accuracy:0.55625
+epoch:50, accuracy:0.55450
+epoch:60, accuracy:0.55363
+epoch:70, accuracy:0.54187
+epoch:80, accuracy:0.54112
+epoch:90, accuracy:0.55663
+epoch:100, accuracy:0.54587
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (8500, 32, 32, 3)
+the size of test label is (8500,)
+epoch:0, accuracy:0.45847
+epoch:10, accuracy:0.52753
+epoch:20, accuracy:0.50459
+epoch:30, accuracy:0.51235
+epoch:40, accuracy:0.52224
+epoch:50, accuracy:0.53776
+epoch:60, accuracy:0.53200
+epoch:70, accuracy:0.53588
+epoch:80, accuracy:0.53000
+epoch:90, accuracy:0.53694
+epoch:100, accuracy:0.53459
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (9000, 32, 32, 3)
+the size of test label is (9000,)
+epoch:0, accuracy:0.48533
+epoch:10, accuracy:0.47044
+epoch:20, accuracy:0.49833
+epoch:30, accuracy:0.52089
+epoch:40, accuracy:0.49433
+epoch:50, accuracy:0.52600
+epoch:60, accuracy:0.50978
+epoch:70, accuracy:0.52167
+epoch:80, accuracy:0.51556
+epoch:90, accuracy:0.52878
+epoch:100, accuracy:0.52144
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (9500, 32, 32, 3)
+the size of test label is (9500,)
+epoch:0, accuracy:0.47358
+epoch:10, accuracy:0.49074
+epoch:20, accuracy:0.50768
+epoch:30, accuracy:0.52432
+epoch:40, accuracy:0.49621
+epoch:50, accuracy:0.50768
+epoch:60, accuracy:0.51632
+epoch:70, accuracy:0.50916
+epoch:80, accuracy:0.50958
+epoch:90, accuracy:0.51379
+epoch:100, accuracy:0.51116
+the size of train set is (2500, 32, 32, 3)
+the size of train label is (2500,)
+the size of test set is (10000, 32, 32, 3)
+the size of test label is (10000,)
+epoch:0, accuracy:0.44970
+epoch:10, accuracy:0.48880
+epoch:20, accuracy:0.49420
+epoch:30, accuracy:0.47910
+epoch:40, accuracy:0.47890
+epoch:50, accuracy:0.50410
+epoch:60, accuracy:0.48850
+epoch:70, accuracy:0.49850
+epoch:80, accuracy:0.48510
+epoch:90, accuracy:0.48820
+epoch:100, accuracy:0.49190
+############# Test for each Task #############
+Files already downloaded and verified
+####################################################################################################
+[68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+/home/nthucs/CVPR_PASS/CVPR21_PASS/main.py:89: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model = torch.load(filename)
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+[0.8076, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.7106, 0.902, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.678, 0.774, 0.716, 0, 0, 0, 0, 0, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.6334, 0.698, 0.592, 0.762, 0, 0, 0, 0, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.5878, 0.632, 0.448, 0.638, 0.9, 0, 0, 0, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.572, 0.616, 0.412, 0.622, 0.764, 0.744, 0, 0, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.523, 0.47, 0.366, 0.57, 0.718, 0.642, 0.738, 0, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.5012, 0.482, 0.326, 0.496, 0.704, 0.574, 0.632, 0.862, 0, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.4896, 0.454, 0.308, 0.478, 0.652, 0.596, 0.604, 0.712, 0.686, 0, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.468, 0.452, 0.288, 0.446, 0.65, 0.566, 0.558, 0.73, 0.556, 0.786, 0]
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+the size of test set is (500, 32, 32, 3)
+the size of test label is (500,)
+[0.4356, 0.41, 0.268, 0.462, 0.628, 0.552, 0.506, 0.682, 0.524, 0.628, 0.822]
+[[0.8076, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0.7106, 0.902, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0.678, 0.774, 0.716, 0, 0, 0, 0, 0, 0, 0, 0], [0.6334, 0.698, 0.592, 0.762, 0, 0, 0, 0, 0, 0, 0], [0.5878, 0.632, 0.448, 0.638, 0.9, 0, 0, 0, 0, 0, 0], [0.572, 0.616, 0.412, 0.622, 0.764, 0.744, 0, 0, 0, 0, 0], [0.523, 0.47, 0.366, 0.57, 0.718, 0.642, 0.738, 0, 0, 0, 0], [0.5012, 0.482, 0.326, 0.496, 0.704, 0.574, 0.632, 0.862, 0, 0, 0], [0.4896, 0.454, 0.308, 0.478, 0.652, 0.596, 0.604, 0.712, 0.686, 0, 0], [0.468, 0.452, 0.288, 0.446, 0.65, 0.566, 0.558, 0.73, 0.556, 0.786, 0], [0.4356, 0.41, 0.268, 0.462, 0.628, 0.552, 0.506, 0.682, 0.524, 0.628, 0.822]]
+############# Test for up2now Task #############
+Files already downloaded and verified
+####################################################################################################
+[68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+/home/nthucs/CVPR_PASS/CVPR21_PASS/main.py:124: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model = torch.load(filename)
+the size of test set is (5000, 32, 32, 3)
+the size of test label is (5000,)
+0.8076
+the size of test set is (5500, 32, 32, 3)
+the size of test label is (5500,)
+0.728
+the size of test set is (6000, 32, 32, 3)
+the size of test label is (6000,)
+0.6891666666666667
+the size of test set is (6500, 32, 32, 3)
+the size of test label is (6500,)
+0.6450769230769231
+the size of test set is (7000, 32, 32, 3)
+the size of test label is (7000,)
+0.6068571428571429
+the size of test set is (7500, 32, 32, 3)
+the size of test label is (7500,)
+0.5918666666666667
+the size of test set is (8000, 32, 32, 3)
+the size of test label is (8000,)
+0.545875
+the size of test set is (8500, 32, 32, 3)
+the size of test label is (8500,)
+0.5345882352941177
+the size of test set is (9000, 32, 32, 3)
+the size of test label is (9000,)
+0.5214444444444445
+the size of test set is (9500, 32, 32, 3)
+the size of test label is (9500,)
+0.5111578947368421
+the size of test set is (10000, 32, 32, 3)
+the size of test label is (10000,)
+0.4919
